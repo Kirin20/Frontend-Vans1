@@ -1,0 +1,46 @@
+<br><br>
+<div class="container">
+  
+
+    <!--showmessage alert for delete-->
+    <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{successmsg}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Size</th>
+          <th scope="col">Colour</th>
+          <th scope="col">Details</th>
+          <th scope="col">Price</th>
+          <th scope="col">Action</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = 'let us of listData'>
+          <th scope="row">{{us.id}}</th>
+          <td>{{us.name}}</td>
+          <td>{{us.phonenumber}}</td>
+          <td>{{us.size}}</td>
+          <td>{{us.colour}}</td>
+          <td>{{us.details}}</td>
+          <td>{{us.price}}</td>
+          
+          <td>
+            <button class="btn btn-sm btn-danger"  (click)="deleteId(us.id)">Delete</button>
+            
+            <a [routerLink]="['/updateCustomer', us.id]" class="btn btn-sm btn-success">Update</a>
+          </td>
+        </tr>
+  
+      </tbody>
+    </table>
+  
+  </div>

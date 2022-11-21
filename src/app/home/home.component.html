@@ -1,0 +1,163 @@
+<div>
+    <head>
+    <style>
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgba(26, 40, 107, 0.555);
+    }
+    p{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: antiquewhite;
+    }
+    li a:hover {
+      background-color: #232320;
+    }
+    
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    
+    
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    h3 {text-align: center;
+    color:rgb(0, 0, 0);
+    font-family:'Oswald', sans-serif;
+    }
+    
+    p {text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color:rgb(0, 0, 0);}
+    
+    </style>
+    </head>
+    <body>
+    <section class="sub-header">
+    </section><br><br>
+
+    <div align="center">
+      <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
+    </div>
+    <br>
+
+    <h3>Vans</h3>
+    <p>MAKE YOUR OWN LANE </p>
+    <p>RELAX. SKATE. ENJOY..</p>
+      
+    <div class="slideshow-container">
+    
+        <img src="assets/pic1.jpeg" style="width:25%">
+        <div align="center">Classic </div>
+      </div>
+      
+         <br><br> 
+        <img src="assets/pic2.webp" style="width:25%">
+        <div align="center">Old Scholl </div>
+    
+      
+        <br><br>
+        <img src="assets/pic3.webp" style="width:25%">
+        <div align="center">One Piece X Vans </div>
+    
+    
+        <br>
+        <img src="assets/pic4.jpeg" style="width:25%">
+        <div align="center">Spongebob Limited Edition</div>
+        <section class="vission">
+          <h1>ABOUT US</h1>
+
+          
+
+          <div class="row">
+              <div class="vission-col">
+                  <h3>SLOGAN</h3>
+                  <p>Off the Wall.<br><br></p>
+              </div>
+
+              <div class="vission-col">
+                  <h3>VISSION</h3>
+                  <p>Vans vision statement is “designed for the creative pursuit of being you.” Helping customers to not only enjoy themselves but also realize their potential is undoubtedly the emphasis of this statement. It has the following components:Creative pursuit. In this component, Vans echoes the value it places on creativity. That is why all its products can only be defined as state of the art.Being you. To ensure it is the best, Vans puts into account the personal needs and preferences of its customers in everything it does. As a result, these inform all the designs..<br><br></p>
+              </div>
+
+              <div class="vission-col">
+              <h3>MISSION</h3>
+              <p>Vans satisfies this component by being a liberal-minded corporation that designs all its products with its customers in mind. In fact, customers highly regard Vans because of the wide variety of sporting equipment it avails for them to choose from in addition to their high quality, yet very fairly priced.<br><br></p>
+              </div>
+          </div>
+      </section>
+
+      <section class="footer">
+        <h4>About Us</h4>
+        <p>HQ OFFICE (PUTRAJAYA) <BR> LEVEL 29,IOI CITY TOWER, 62502,PUTRAJAYA, MALAYSIA <BR> EMAIL: VansHQ@gmail.com<br>
+           Telephone: +603 8947 8888
+        <br>Business Hour: 0900 - 1800 (Monday to Friday)</p>
+    
+        
+       
+
+    </section>
+      
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+    
+      <br>
+      
+      <br>
+    
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+    
+    
+        <script>
+          /* When the user clicks on the button, 
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+              if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+              }
+            }
+          }
+          </script>

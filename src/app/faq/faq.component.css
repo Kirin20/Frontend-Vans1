@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body{
+   background: #ecebac;
+}
+
+.box{
+   width: auto;
+   margin: auto;
+   background: rgb(224, 212, 133);
+   border-radius: 35px;
+   box-shadow: 0px 0px 30px -5px black;
+}
+
+.box .heading{
+   background: #7800CF;
+   border-radius: 7px 7px 0px 0px;
+   padding: 10px;
+   color: rgb(26, 14, 12);
+   text-align: center;
+   font-family: "Rubik";
+}
+
+.faqs{
+   padding: 0px 20px 20px;
+}
+
+::-webkit-details-marker{
+   float: right;
+   margin-top: 3px;
+}
+
+details{
+   background: #ce2605db;
+   padding: 10px 20px;
+   border-radius: 30px;
+   margin-top: 20px;
+   font-family: "Rubik";
+   font-size: 14px;
+   letter-spacing: 1px;
+   cursor: pointer;
+   color: black;
+}
+
+details summary{
+   outline: none;
+}
+
+.sub-header{
+   height: 80vh;
+   width: 100%;
+   background-image: linear-gradient(rgba(255, 255, 255, 0.29), rgba(255, 255, 255, 0.24)), url(faq1.jpg);
+   background-position: center;
+   background-size: cover;
+   text-align: center;
+   color: rgba(255, 247, 247, 0.8);
+}
+
+/*----------Footer------------*/
+
+.footer{
+   width: 100%;
+   text-align: center;
+   padding: 30px 0;
+}
+
+.footer h4{
+   margin-bottom: 25px;
+   margin-top: 20px;
+   font-weight: 600;
+}

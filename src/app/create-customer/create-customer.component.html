@@ -1,0 +1,69 @@
+<meta name="viewport" content="width-device-width" initial-scale="1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cf721f2948.js" crossorigin="anonymous"></script>
+
+<section class="sub-header">
+  <nav>
+      <img src=""></nav></section>
+
+    <h2 id="tagging" style="text-align:center">CUSTOMER DETAILS</h2> 
+    <br>
+    <br>
+<div id="outPopUp" class="container mt-5">
+    <div class="container mt-5">
+    
+        <!--to show error alert-->
+        <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{errormsg}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      
+          <!--to show success alert-->
+          <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{successmsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      
+        <form  [formGroup]="customerForm" >
+          <div class="col-lg-6 mt-2" >
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter Customer name">
+          </div>
+      
+          <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control" formControlName="phonenumber" placeholder="Enter Customer phonenumber">
+          </div>
+      
+          <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control"  formControlName="size" placeholder="Enter Customer size">
+          </div>
+      
+          <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control"  formControlName="colour" placeholder="Enter Customer colour ">
+          </div>
+
+          <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control"  formControlName="details" placeholder="Enter Customer details ">
+          </div>
+
+          <div class="col-lg-6 mt-2">
+            <input type="text" class="form-control"  formControlName="price" placeholder="Enter Customer price ">
+          </div>
+
+      
+          <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="customerSubmit()">
+      <button class="btn btn-primary">Register</button>
+          </div>
+      
+        
+          <div class="col-lg-4 mt-2" *ngIf="getparamid" (click)="customerUpdate()">
+            <button class="btn btn-primary btn-sm">Update</button>
+        </div>
+    
+        </form>
+      
+      </div>
+    </div>
+<br><br><br>
+

@@ -1,0 +1,28 @@
+
+@import url(https://bootswatch.com/5/pulse/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap);
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header{
+    min-height: 10vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(254, 251, 241, 0.8), rgba(255, 239, 176, 0.8)), url(Background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
